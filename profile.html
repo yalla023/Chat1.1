@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Messenger</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Profile</h1>
+        <div class="header-buttons">
+            <button onclick="window.location.href='index.html'">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="pic2.png.jpg" alt="Profile Picture">
+                    <div class="edit-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <h2>Prashanth</h2>
+                <p>@prashanth123</p>
+            </div>
+            
+            <div class="profile-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <label>Email</label>
+                        <p>prashanth@example.com</p>
+                    </div>
+                    <i class="fas fa-pen edit-icon"></i>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <label>Phone</label>
+                        <p>+1 234 567 8900</p>
+                    </div>
+                    <i class="fas fa-pen edit-icon"></i>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <label>About</label>
+                        <p>Hey there! I'm using Messenger</p>
+                    </div>
+                    <i class="fas fa-pen edit-icon"></i>
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <button class="action-btn">
+                    <i class="fas fa-key"></i>
+                    Change Password
+                </button>
+                <button class="action-btn logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

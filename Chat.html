@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Messenger</h1>
+        <div class="header-buttons">
+            <button onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i> Back</button>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="chat-container chat-page">
+            <div class="chat-area">
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <img src="pic2.png.jpg" alt="Current Chat" id="chat-user-image">
+                        <h3 id="chat-user-name">Prashanth</h3>
+                    </div>
+                    <div class="chat-actions">
+                        <button><i class="fas fa-phone"></i></button>
+                        <button><i class="fas fa-video"></i></button>
+                        <button><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                <div class="messages">
+                    <div class="message received">
+                        <p>Hello, how are you?</p>
+                        <span class="time">12:30</span>
+                    </div>
+                    <div class="message sent">
+                        <p>I'm doing great! Thanks for asking.</p>
+                        <span class="time">12:31</span>
+                    </div>
+                </div>
+                <div class="message-input">
+                    <button><i class="fas fa-plus"></i></button>
+                    <input type="text" placeholder="Type a message...">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get chat details from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('user');
+        const userImage = urlParams.get('image');
+
+        // Update chat header with user details
+        if (userName) {
+            document.getElementById('chat-user-name').textContent = userName;
+        }
+        if (userImage) {
+            document.getElementById('chat-user-image').src = userImage;
+        }
+    </script>
+</body>
+</html>
